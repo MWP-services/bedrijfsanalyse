@@ -15,10 +15,10 @@ npm run dev
 npm run build
 ```
 
-De build-output staat in `dist/`. Voor Azure Static Web Apps gebruik je normaal:
+De build-output staat in `build/`. Voor Azure Static Web Apps gebruik je normaal:
 
 - App location: `/`
-- Output location: `dist`
+- Output location: `build`
 
 ## Opdrachten aanpassen
 
