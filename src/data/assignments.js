@@ -125,22 +125,22 @@ const kpnMissionAssignment = {
 }
 
 const assignmentTemplates = [
-  ['1.1', 'Profiel van KPN'],
-  ['1.2', 'Evaluatie SDGs en duurzaamheid bij KPN'],
-  ['2.1', 'Brancheanalyse Nederlandse telecommarkt'],
-  ['3.1', 'Solvabiliteit KPN'],
-  ['3.2', 'Liquiditeit KPN'],
-  ['3.3', 'Rentabiliteit KPN'],
-  ['3.4', 'Activiteit KPN'],
-  ['3.5', 'Werknemerskengetallen KPN'],
-  ['3.6', 'Omgevingsanalyse KPN'],
-  ['3.7', 'Beleggingskengetallen KPN'],
-  ['5.1', 'Commercieel risico KPN'],
-  ['5.2', 'Bedrijfsrisico KPN'],
-  ['5.3', 'Financieel risico KPN'],
-  ['5.4', 'Risicoprofiel KPN'],
-  ['8.1', 'SWOT-analyse KPN'],
-  ['9.1', 'Professioneel beleggingsadvies KPN'],
+  ['2', 'Profiel van KPN'],
+  ['3', 'Evaluatie SDGs en duurzaamheid bij KPN'],
+  ['4', 'Brancheanalyse Nederlandse telecommarkt'],
+  ['5', 'Solvabiliteit KPN'],
+  ['6', 'Liquiditeit KPN'],
+  ['7', 'Rentabiliteit KPN'],
+  ['8', 'Activiteit KPN'],
+  ['9', 'Werknemerskengetallen KPN'],
+  ['10', 'Omgevingsanalyse KPN'],
+  ['11', 'Beleggingskengetallen KPN'],
+  ['12', 'Commercieel risico KPN'],
+  ['13', 'Bedrijfsrisico KPN'],
+  ['14', 'Financieel risico KPN'],
+  ['15', 'Risicoprofiel KPN'],
+  ['16', 'SWOT-analyse KPN'],
+  ['17', 'Professioneel beleggingsadvies KPN'],
 ]
 
 // Pas opdrachten hier aan. Voeg tekst, afbeeldingen, tabellen, bronnen en conclusies per opdracht toe.
