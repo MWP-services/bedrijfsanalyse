@@ -1,160 +1,402 @@
-const baseTable = {
-  title: 'Tabel voor KPN-analyse',
-  columns: ['Kengetal', 'Jaar 1', 'Jaar 2', 'Toelichting'],
-  rows: [['Vul in', '-', '-', 'Plaats hier de interpretatie voor KPN']],
-}
+// Nieuwe opdrachten voeg je toe aan assignmentItems.
+// Opdrachtteksten, tabellen, KPI's, bronnen en conclusies pas je hier aan.
+// Afbeeldingen zet je in public/images en verwijs je met src: '/images/bestandsnaam.png'.
+// Opdracht 1.3 is bewust als placeholder ingericht; vul later de definitieve canvasblokken hieronder aan.
 
-const baseImages = [
-  { title: 'Grafiek voor KPN', caption: 'Plaats afbeeldingen in public/images en verwijs bijvoorbeeld naar /images/kpn-grafiek.png.' },
+const kpnImages = [
+  { title: 'KPN in een oogopslag', caption: 'Plaats hier de infographic van KPN in een oogopslag.', src: '' },
+  { title: 'Ashridge Mission Model', caption: 'Plaats hier de infographic van het Ashridge Mission Model.', src: '' },
+  { title: 'Stakeholderanalyse en krachtenveld', caption: 'Plaats hier de infographic van stakeholderanalyse en krachtenveld.', src: '' },
 ]
 
-const kpnMissionAssignment = {
-  id: 'opdracht-1-ashridge',
-  opdrachtNummer: '1',
-  titel: 'Evaluatie missie, visie, doelstellingen en strategie',
-  subtitel: 'KPN volgens het Ashridge Mission Model',
-  korteIntro: 'In deze opdracht wordt onderzocht in hoeverre de missie, visie, doelstellingen, strategie, kernwaarden en gedragsnormen van KPN logisch op elkaar aansluiten. Hiervoor wordt gebruikgemaakt van het Ashridge Mission Model.',
-  volledigeTekst: '',
-  sections: [
-    {
-      type: 'cards',
-      title: 'Missie, visie, doelstellingen en strategie',
-      cards: [
-        {
-          title: 'Missie',
-          text: 'KPN verbindt mensen, bedrijven en organisaties met betrouwbare en veilige digitale netwerken en diensten. Het bedrijf wil bijdragen aan een verbonden en digitaal toegankelijke samenleving.',
-        },
-        {
-          title: 'Visie',
-          text: 'KPN streeft naar een toekomst waarin digitale technologie veilig, innovatief en duurzaam is voor iedereen.',
-        },
-        {
-          title: 'Doelstellingen',
-          items: [
-            'Betrouwbare telecom- en internetdiensten leveren.',
-            'Klanttevredenheid verhogen.',
-            'Glasvezel- en 5G-netwerken uitbreiden.',
-            'Digitale veiligheid versterken.',
-            'Duurzaam ondernemen.',
-          ],
-        },
-        {
-          title: 'Strategie',
-          items: [
-            'Investeren in glasvezel en 5G.',
-            'Investeren in cybersecurity.',
-            'Stimuleren van digitale innovatie.',
-            'Verbeteren van klantgerichte dienstverlening.',
-            'Versterken van duurzame bedrijfsvoering.',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'table',
-      title: 'Ashridge Mission Model',
-      columns: ['Onderdeel', 'Toepassing bij KPN'],
-      rows: [
-        ['Doel (Purpose)', 'Mensen en organisaties verbinden door betrouwbare digitale communicatie mogelijk te maken.'],
-        ['Strategie (Strategy)', 'Investeren in netwerken, innovatie, veiligheid en duurzaamheid.'],
-        ['Waarden (Values)', 'Betrouwbaarheid, innovatie, klantgerichtheid, verantwoordelijkheid en duurzaamheid.'],
-        ['Gedragsnormen (Behaviour Standards)', 'Integer, klantgericht en verantwoord handelen.'],
-      ],
-      assessment: 'De strategie, waarden en gedragsnormen ondersteunen het doel van KPN. Ze zorgen ervoor dat de organisatie betrouwbaar, innovatief en klantgericht blijft.',
-    },
-    {
-      type: 'iconCards',
-      title: 'Kernwaarden',
-      cards: [
-        { title: 'Betrouwbaarheid', icon: 'ShieldCheck', text: 'KPN levert stabiele en veilige diensten.' },
-        { title: 'Innovatie', icon: 'TrendingUp', text: 'KPN investeert continu in nieuwe technologieen.' },
-        { title: 'Klantgerichtheid', icon: 'Users', text: 'De wensen van klanten staan centraal.' },
-        { title: 'Verantwoordelijkheid', icon: 'CheckCircle', text: 'Privacy, veiligheid en maatschappelijke impact zijn belangrijke aandachtspunten.' },
-        { title: 'Duurzaamheid', icon: 'Leaf', text: 'KPN werkt aan een toekomstbestendige en duurzame organisatie.' },
-      ],
-    },
-    {
-      type: 'checklist',
-      title: 'Van medewerkers wordt verwacht dat zij:',
-      items: [
-        'Eerlijk en transparant handelen.',
-        'Privacy respecteren.',
-        'Klantgericht werken.',
-        'Wet- en regelgeving naleven.',
-        'Verantwoord omgaan met middelen.',
-      ],
-      assessment: 'Deze gedragsregels sluiten goed aan bij de missie en kernwaarden van KPN.',
-    },
-    {
-      type: 'table',
-      title: 'Stakeholderanalyse',
-      columns: ['Stakeholder', 'Belang', 'Invloed'],
-      rows: [
-        ['Klanten', 'Betrouwbare dienstverlening', 'Hoog'],
-        ['Medewerkers', 'Goede arbeidsvoorwaarden', 'Hoog'],
-        ['Aandeelhouders', 'Rendement en groei', 'Hoog'],
-        ['Leveranciers', 'Samenwerking', 'Gemiddeld'],
-        ['Overheid/ACM', 'Wet- en regelgeving', 'Hoog'],
-        ['Maatschappij', 'Duurzaamheid en privacy', 'Gemiddeld'],
-      ],
-      assessment: 'Klanten, medewerkers, aandeelhouders en de overheid zijn de belangrijkste stakeholders omdat zij veel invloed hebben op het succes van KPN.',
-    },
-    {
-      type: 'matrix',
-      title: 'Krachtenveld',
-      cells: [
-        { title: 'Hoog belang - Hoge invloed', items: ['Klanten', 'Medewerkers', 'Aandeelhouders', 'Overheid/ACM'] },
-        { title: 'Hoog belang - Lage invloed', items: ['Maatschappelijke organisaties', 'Lokale gemeenschappen'] },
-        { title: 'Laag belang - Hoge invloed', items: ['Grote leveranciers', 'Technologiepartners'] },
-        { title: 'Laag belang - Lage invloed', items: ['Algemeen publiek'] },
-      ],
-    },
-    {
-      type: 'conclusion',
-      title: 'Conclusie',
-      text: 'De missie, visie, strategie en kernwaarden van KPN sluiten goed op elkaar aan. Door te investeren in innovatie, betrouwbaarheid en duurzaamheid kan KPN haar belangrijkste stakeholders bedienen en haar positie als toonaangevende telecomaanbieder behouden. Dit maakt het Ashridge Mission Model duidelijk zichtbaar binnen de organisatie.',
-    },
-  ],
-  afbeeldingen: [],
-  tabellen: [],
-  bronnen: [
-    'KPN jaarverslag en strategiepagina, te controleren en aan te vullen met de definitieve bronvermelding.',
-    'Ashridge Mission Model, te verwijzen volgens de afgesproken bronstijl.',
-  ],
-  conclusie: 'De samenhang tussen missie, visie, strategie, kernwaarden en gedragsnormen is sterk zichtbaar bij KPN.',
-}
-
-const assignmentTemplates = [
-  ['2', 'Profiel van KPN'],
-  ['3', 'Evaluatie SDGs en duurzaamheid bij KPN'],
-  ['4', 'Brancheanalyse Nederlandse telecommarkt'],
-  ['5', 'Solvabiliteit KPN'],
-  ['6', 'Liquiditeit KPN'],
-  ['7', 'Rentabiliteit KPN'],
-  ['8', 'Activiteit KPN'],
-  ['9', 'Werknemerskengetallen KPN'],
-  ['10', 'Omgevingsanalyse KPN'],
-  ['11', 'Beleggingskengetallen KPN'],
-  ['12', 'Commercieel risico KPN'],
-  ['13', 'Bedrijfsrisico KPN'],
-  ['14', 'Financieel risico KPN'],
-  ['15', 'Risicoprofiel KPN'],
-  ['16', 'SWOT-analyse KPN'],
-  ['17', 'Professioneel beleggingsadvies KPN'],
-]
-
-// Pas opdrachten hier aan. Voeg tekst, afbeeldingen, tabellen, bronnen en conclusies per opdracht toe.
 export const assignmentItems = [
-  kpnMissionAssignment,
-  ...assignmentTemplates.map(([opdrachtNummer, titel]) => ({
-    id: `opdracht-${opdrachtNummer.replace('.', '-')}`,
-    opdrachtNummer,
-    titel,
-    korteIntro: `Werk hier de opdracht over ${titel} uit voor KPN.`,
-    volledigeTekst: 'Vul hier de volledige KPN-uitwerking in. Gebruik feitelijke onderbouwing, bronvermelding en een duidelijke interpretatie.',
-    afbeeldingen: baseImages,
-    tabellen: [baseTable],
-    bronnen: ['Vul hier KPN-bronvermeldingen in volgens de afgesproken stijl.'],
-    conclusie: 'Vul hier de conclusie van deze KPN-opdracht in.',
-  })),
+  {
+    id: 'hoofdstuk-1',
+    opdrachtNummer: 'Hoofdstuk 1',
+    titel: 'Profiel van de onderneming',
+    subtitel: 'Bedrijfsanalyse KPN',
+    korteIntro: 'Dit hoofdstuk beschrijft het profiel van KPN en werkt de eerste analyseopdrachten uit: missie, duurzaamheid, Business Model Canvas en het 7S-model.',
+    volledigeTekst: '',
+    sections: [],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: ['KPN Integrated Annual Report 2024.', 'KPN investor relations en corporate website.'],
+    conclusie: 'Hoofdstuk 1 vormt de basis voor de verdere bedrijfsanalyse van KPN.',
+  },
+  {
+    id: 'opdracht-1-1',
+    opdrachtNummer: '1.1',
+    titel: 'Ashridge Mission Model, kernwaarden en stakeholderanalyse',
+    subtitel: 'Missie, waarden, gedragscode en stakeholders van KPN',
+    korteIntro: 'In deze opdracht wordt KPN geanalyseerd aan de hand van het Ashridge Mission Model. Daarbij wordt gekeken naar de missie, visie, doelstellingen, strategie, kernwaarden, gedragscode en stakeholders van de onderneming.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'images',
+        title: 'Visuele ondersteuning',
+        images: kpnImages,
+      },
+      {
+        type: 'cards',
+        title: 'Missie, visie, doelstellingen en strategie',
+        cards: [
+          { title: 'Missie', text: 'KPN verbindt mensen, bedrijven en organisaties met betrouwbare en veilige digitale netwerken en diensten. Het bedrijf wil bijdragen aan een verbonden en digitaal toegankelijke samenleving.' },
+          { title: 'Visie', text: 'KPN streeft naar een toekomst waarin digitale technologie veilig, innovatief en duurzaam is voor iedereen.' },
+          {
+            title: 'Doelstellingen',
+            items: [
+              'Betrouwbare telecom- en internetdiensten leveren.',
+              'Klanttevredenheid verhogen.',
+              'Glasvezel- en 5G-netwerken uitbreiden.',
+              'Digitale veiligheid versterken.',
+              'Duurzaam ondernemen.',
+            ],
+          },
+          { title: 'Strategie', text: 'KPN bereikt deze doelen door te investeren in glasvezel en 5G, cybersecurity, digitale innovatie, klantgerichte dienstverlening en duurzame bedrijfsvoering.' },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Ashridge Mission Model',
+        columns: ['Onderdeel', 'Toepassing bij KPN'],
+        rows: [
+          ['Doel (Purpose)', 'Mensen en organisaties verbinden door betrouwbare digitale communicatie mogelijk te maken.'],
+          ['Strategie (Strategy)', 'Investeren in netwerken, innovatie, veiligheid en duurzaamheid.'],
+          ['Waarden (Values)', 'Betrouwbaarheid, innovatie, klantgerichtheid, verantwoordelijkheid en duurzaamheid.'],
+          ['Gedragsnormen (Behaviour Standards)', 'Integer, klantgericht en verantwoord handelen.'],
+        ],
+        assessment: 'De strategie, waarden en gedragsnormen ondersteunen het doel van KPN. Ze zorgen ervoor dat de organisatie betrouwbaar, innovatief en klantgericht blijft.',
+      },
+      {
+        type: 'iconCards',
+        title: 'Kernwaarden',
+        cards: [
+          { title: 'Betrouwbaarheid', icon: 'ShieldCheck', text: 'KPN levert stabiele en veilige diensten.' },
+          { title: 'Innovatie', icon: 'TrendingUp', text: 'KPN investeert continu in nieuwe technologieen.' },
+          { title: 'Klantgerichtheid', icon: 'Users', text: 'De wensen van klanten staan centraal.' },
+          { title: 'Verantwoordelijkheid', icon: 'CheckCircle', text: 'Privacy, veiligheid en maatschappelijke impact zijn belangrijke aandachtspunten.' },
+          { title: 'Duurzaamheid', icon: 'Leaf', text: 'KPN werkt aan een toekomstbestendige en duurzame organisatie.' },
+        ],
+      },
+      {
+        type: 'checklist',
+        title: 'Van medewerkers wordt verwacht dat zij:',
+        items: [
+          'Eerlijk en transparant handelen.',
+          'Privacy respecteren.',
+          'Klantgericht werken.',
+          'Wet- en regelgeving naleven.',
+          'Verantwoord omgaan met middelen.',
+        ],
+        assessment: 'Deze gedragsregels sluiten goed aan bij de missie en kernwaarden van KPN.',
+      },
+      {
+        type: 'table',
+        title: 'Stakeholderanalyse',
+        columns: ['Stakeholder', 'Belang', 'Invloed'],
+        rows: [
+          ['Klanten', 'Betrouwbare dienstverlening', 'Hoog'],
+          ['Medewerkers', 'Goede arbeidsvoorwaarden', 'Hoog'],
+          ['Aandeelhouders', 'Rendement en groei', 'Hoog'],
+          ['Leveranciers', 'Samenwerking', 'Gemiddeld'],
+          ['Overheid/ACM', 'Wet- en regelgeving', 'Hoog'],
+          ['Maatschappij', 'Duurzaamheid en privacy', 'Gemiddeld'],
+        ],
+        assessment: 'Klanten, medewerkers, aandeelhouders en de overheid zijn de belangrijkste stakeholders omdat zij veel invloed hebben op het succes van KPN.',
+      },
+      {
+        type: 'matrix',
+        title: 'Krachtenveld',
+        cells: [
+          { title: 'Hoog belang - Hoge invloed', items: ['Klanten', 'Medewerkers', 'Aandeelhouders', 'Overheid/ACM'] },
+          { title: 'Hoog belang - Lage invloed', items: ['Maatschappelijke organisaties', 'Lokale gemeenschappen'] },
+          { title: 'Laag belang - Hoge invloed', items: ['Grote leveranciers', 'Technologiepartners'] },
+          { title: 'Laag belang - Lage invloed', items: ['Algemeen publiek'] },
+        ],
+      },
+      {
+        type: 'conclusion',
+        title: 'Conclusie opdracht 1.1',
+        text: 'De missie, visie, strategie en kernwaarden van KPN sluiten goed op elkaar aan. Door te investeren in innovatie, betrouwbaarheid en duurzaamheid kan KPN haar belangrijkste stakeholders bedienen en haar positie als toonaangevende telecomaanbieder behouden. Dit maakt het Ashridge Mission Model duidelijk zichtbaar binnen de organisatie.',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: ['KPN Integrated Annual Report 2024.', 'Ashridge Mission Model, behandeld binnen Bedrijfsanalyse.'],
+    conclusie: 'Het Ashridge Mission Model is duidelijk zichtbaar in de samenhang tussen missie, strategie, waarden en gedragsnormen van KPN.',
+  },
+  {
+    id: 'opdracht-1-2',
+    opdrachtNummer: '1.2',
+    titel: 'Duurzaamheid, SDGs en ESG-beleid van KPN',
+    subtitel: 'Responsible, Inclusive en Sustainable',
+    korteIntro: 'Duurzaamheid vormt een belangrijk onderdeel van de strategie van KPN. In het Integrated Annual Report 2024 koppelt KPN haar ESG-beleid aan verschillende Sustainable Development Goals van de Verenigde Naties. Daarbij staan drie thema\'s centraal: Responsible, Inclusive en Sustainable.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'iconCards',
+        title: 'Door KPN omarmde SDGs',
+        cards: [
+          { title: 'SDG 5', icon: 'Users', text: 'Gendergelijkheid.' },
+          { title: 'SDG 7', icon: 'Leaf', text: 'Betaalbare en duurzame energie.' },
+          { title: 'SDG 8', icon: 'TrendingUp', text: 'Waardig werk en economische groei.' },
+          { title: 'SDG 9', icon: 'Network', text: 'Industrie, innovatie en infrastructuur.' },
+          { title: 'SDG 10', icon: 'Users', text: 'Ongelijkheid verminderen.' },
+          { title: 'SDG 12', icon: 'CheckCircle', text: 'Verantwoorde consumptie en productie.' },
+          { title: 'SDG 13', icon: 'Leaf', text: 'Klimaatactie.' },
+        ],
+      },
+      {
+        type: 'kpis',
+        title: 'Acties, resultaten en KPIs',
+        text: 'Deze doelen sluiten goed aan bij de activiteiten van KPN als telecom- en infrastructuurbedrijf.',
+        items: [
+          { label: 'Net-zero doelstelling', value: '2040', text: 'KPN streeft ernaar om in 2040 een net-zero organisatie te zijn.' },
+          { label: 'Scope 1-uitstoot 2024', value: '6.208 ton', text: 'CO2-equivalenten.' },
+          { label: 'Scope 2-uitstoot 2024', value: '118.356 ton', text: 'CO2-equivalenten.' },
+          { label: 'Scope 3-uitstoot 2024', value: '813.481 ton', text: 'CO2-equivalenten.' },
+          { label: 'Circulariteit', value: '88%', text: 'In 2024 werd 88% van de materialen hergebruikt of gerecycled.' },
+          { label: 'Doelstelling circulariteit', value: '86%', text: 'Doelstelling 2025: minimaal 86% hergebruik of recycling. Deze doelstelling is al behaald.' },
+          { label: 'Glasvezel', value: '63%', text: 'Van de Nederlandse huishoudens had toegang tot het glasvezelnetwerk van KPN en Glaspoort.' },
+          { label: '5G', value: '98%', text: 'KPN realiseerde een landelijke 5G-dekking van 98%.' },
+          { label: 'Medewerkerbetrokkenheid', value: '81%', text: 'Boven de doelstelling van 80%.' },
+          { label: 'Vrouwen senior management', value: '33%', text: 'Ten opzichte van de doelstelling van 36% voor 2025.' },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Vergelijking met VodafoneZiggo',
+        columns: ['Onderwerp', 'KPN', 'VodafoneZiggo'],
+        rows: [
+          ['CO2-reductie', 'Sterk gekoppeld aan netwerken en energie-efficientie', 'Investeert ook in CO2-reductie'],
+          ['Circulariteit', '88% hergebruik/recycling in 2024', 'Investeert ook in circulariteit'],
+          ['Digitale inclusie', 'Onderdeel van ESG-strategie', 'Ook onderdeel van ESG-beleid'],
+          ['Rapportage', 'Uitgebreide KPIs en meetbare voortgang', 'ESG-rapportage aanwezig'],
+          ['Koppeling aan kernactiviteiten', 'Sterk zichtbaar via glasvezel, 5G en energie-efficiente netwerken', 'Aanwezig, maar minder centraal weergegeven'],
+        ],
+        assessment: 'Het verschil is dat KPN duurzaamheid sterk koppelt aan haar kernactiviteiten, zoals glasvezel, 5G en energie-efficiente netwerken. Daarnaast rapporteert KPN uitgebreid over meetbare KPIs, waardoor de voortgang transparant en goed te beoordelen is.',
+      },
+      {
+        type: 'cards',
+        title: 'Relatie met bedrijfsvoering en greenwashing',
+        cards: [
+          { title: 'Integratie in bedrijfsvoering', text: 'De duurzaamheidsdoelen van KPN zijn direct verbonden met de dagelijkse operatie van het bedrijf. Investeringen in digitale infrastructuur, energiebesparing en circulaire apparatuur maken onderdeel uit van de kernactiviteiten. Hierdoor zijn de SDGs niet alleen ondersteunend aan de strategie, maar daadwerkelijk geintegreerd in de bedrijfsvoering.' },
+          { title: 'Aandachtspunt greenwashing', text: 'Er zijn weinig aanwijzingen voor greenwashing. KPN onderbouwt haar duurzaamheidsclaims met concrete KPIs en rapporteert volgens de CSRD-richtlijnen. Wel blijft de relatief hoge Scope 3-uitstoot een aandachtspunt, omdat deze grotendeels afhankelijk is van leveranciers en partners.' },
+        ],
+      },
+      {
+        type: 'images',
+        title: 'Vergelijking KPN en VodafoneZiggo',
+        images: [{ title: 'KPN vs VodafoneZiggo/Ziggo vergelijking', caption: 'Plaats hier de KPN vs VodafoneZiggo/Ziggo vergelijking.', src: '' }],
+      },
+      {
+        type: 'conclusion',
+        title: 'Conclusie opdracht 1.2',
+        text: 'KPN heeft duurzaamheid stevig geintegreerd in haar strategie en bedrijfsvoering. De organisatie levert via investeringen in glasvezel, 5G, duurzame energie, circulariteit en inclusiviteit een concrete bijdrage aan verschillende SDGs. Vergeleken met VodafoneZiggo is de koppeling tussen duurzaamheid en de operationele activiteiten van KPN duidelijk zichtbaar. Hierdoor kan worden geconcludeerd dat duurzaamheid binnen KPN meer is dan een marketinginstrument en daadwerkelijk onderdeel vormt van de bedrijfsstrategie.',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: ['KPN. (2025). KPN Integrated Annual Report 2024. KPN N.V.', 'VodafoneZiggo. (2024). Environmental, Social & Governance Report 2024. VodafoneZiggo.'],
+    conclusie: 'KPN koppelt duurzaamheid zichtbaar aan strategie, netwerkinvesteringen, circulariteit, inclusiviteit en meetbare ESG-KPIs.',
+  },
+  {
+    id: 'opdracht-1-3',
+    opdrachtNummer: '1.3',
+    titel: 'Business Model Canvas',
+    subtitel: 'Nog aan te vullen',
+    korteIntro: 'In deze opdracht wordt het bedrijfsmodel van KPN samengevat aan de hand van de negen bouwstenen van het Business Model Canvas. De onderstaande canvasstructuur is alvast ingericht, zodat de definitieve analyse later eenvoudig kan worden aangevuld.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'businessCanvas',
+        title: 'Business Model Canvas KPN',
+        badge: 'Nog aan te vullen',
+        conclusion: 'Vul hier later de conclusie van het Business Model Canvas in.',
+        blocks: [
+          { title: 'Klantsegmenten', area: 'customers', text: 'Vul hier de belangrijkste klantgroepen van KPN in, zoals consumenten, zakelijke klanten, overheden en partners.' },
+          { title: 'Waardepropositie', area: 'value', text: 'Vul hier in welke waarde KPN levert, zoals betrouwbare connectiviteit, veilige digitale infrastructuur, glasvezel, 5G en digitale diensten.' },
+          { title: 'Kanalen', area: 'channels', text: 'Vul hier in via welke kanalen KPN klanten bereikt, zoals online, winkels, klantenservice, zakelijke verkoop en partners.' },
+          { title: 'Klantrelaties', area: 'relations', text: 'Vul hier in hoe KPN klantrelaties onderhoudt, bijvoorbeeld via service, abonnementen, selfservice en persoonlijke zakelijke ondersteuning.' },
+          { title: 'Inkomstenstromen', area: 'revenue', text: 'Vul hier in waar KPN omzet uit haalt, zoals abonnementen, zakelijke contracten, internet, mobiele telefonie en digitale diensten.' },
+          { title: 'Key resources', area: 'resources', text: 'Vul hier de belangrijkste middelen in, zoals glasvezelnetwerk, 5G-netwerk, merknaam, medewerkers, IT-systemen en data-infrastructuur.' },
+          { title: 'Kernactiviteiten', area: 'activities', text: 'Vul hier de belangrijkste activiteiten in, zoals netwerkbeheer, innovatie, cybersecurity, klantenservice en verkoop.' },
+          { title: 'Key partners', area: 'partners', text: 'Vul hier belangrijke partners in, zoals technologiepartners, leveranciers, Glaspoort, overheid, ACM en zakelijke partners.' },
+          { title: 'Kostenstructuur', area: 'costs', text: 'Vul hier de belangrijkste kosten in, zoals netwerkinvesteringen, personeel, onderhoud, energie, marketing en technologie.' },
+        ],
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: ['Business Model Canvas model, later aanvullen met definitieve KPN-bronnen.'],
+    conclusie: 'Vul hier later de definitieve conclusie van opdracht 1.3 in.',
+  },
+  {
+    id: 'opdracht-1-4',
+    opdrachtNummer: '1.4',
+    titel: '7S-model van McKinsey toegepast op KPN',
+    subtitel: 'Organisatorische samenhang bij KPN',
+    korteIntro: 'Het 7S-model onderzoekt of de belangrijkste onderdelen van een organisatie goed op elkaar zijn afgestemd. Bij KPN is er sprake van een sterke samenhang tussen de verschillende elementen.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'sevenS',
+        title: '7S-model KPN',
+        items: [
+          { title: 'Strategie', text: 'KPN richt zich op het verbinden van Nederland door te investeren in glasvezel, 5G, cybersecurity en digitale diensten. Daarnaast speelt duurzaamheid een belangrijke rol binnen de strategie.' },
+          { title: 'Structuur', text: 'De organisatie is verdeeld in verschillende bedrijfsonderdelen, zoals consumenten-, zakelijke en netwerkdiensten. Deze structuur ondersteunt de uitvoering van de strategie.' },
+          { title: 'Systemen', text: 'KPN maakt gebruik van geavanceerde IT-, netwerk- en beveiligingssystemen om haar dienstverlening betrouwbaar en efficient te laten verlopen.' },
+          { title: 'Shared Values', text: 'De kernwaarden Trust, Courage en Growth vormen de basis van de organisatiecultuur. Deze waarden ondersteunen de missie om klanten betrouwbare en innovatieve diensten te bieden.' },
+          { title: 'Style', text: 'KPN stimuleert samenwerking, innovatie en klantgerichtheid. De leiderschapsstijl sluit daardoor goed aan bij de strategische doelstellingen.' },
+          { title: 'Staff', text: 'De onderneming investeert in opleiding, ontwikkeling en diversiteit van medewerkers om voldoende kennis en talent in huis te houden.' },
+          { title: 'Skills', text: 'Belangrijke competenties zijn telecomtechnologie, IT, cybersecurity en digitale innovatie. Deze vaardigheden zijn essentieel voor het behalen van de strategische doelen.' },
+        ],
+        alignment: 'De zeven elementen sluiten grotendeels goed op elkaar aan. De strategie wordt ondersteund door de organisatiestructuur, de systemen en de aanwezige kennis van medewerkers. Ook de kernwaarden komen terug in de manier waarop KPN leiding geeft en haar dienstverlening organiseert.',
+        gaps: 'Er zijn enkele aandachtspunten. Zo is er veel vraag naar technisch en IT-talent, waardoor het soms lastig kan zijn om voldoende gespecialiseerde medewerkers aan te trekken. Daarnaast kunnen grote investeringen in innovatie en duurzaamheid op korte termijn botsen met winstdoelstellingen. Deze spanningen zijn echter niet uitzonderlijk voor een grote telecomorganisatie.',
+      },
+      {
+        type: 'conclusion',
+        title: 'Conclusie opdracht 1.4',
+        text: 'De toepassing van het 7S-model laat zien dat KPN een goed gebalanceerde organisatie is. De strategie, structuur, systemen, medewerkers, vaardigheden, leiderschapsstijl en kernwaarden versterken elkaar en ondersteunen gezamenlijk de missie van KPN om Nederland digitaal verbonden te houden.',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: ['McKinsey 7S-model, behandeld binnen Bedrijfsanalyse.', 'KPN Integrated Annual Report 2024.'],
+    conclusie: 'Het 7S-model laat zien dat KPN organisatorisch sterk samenhangt rond strategie, systemen, vaardigheden en gedeelde waarden.',
+  },
+  {
+    id: 'hoofdstuk-2',
+    opdrachtNummer: 'Hoofdstuk 2',
+    titel: 'Brancheanalyse',
+    subtitel: 'Afbakening en analysemethodiek',
+    korteIntro: 'In dit hoofdstuk wordt een specifieke branche waarin KPN actief is geanalyseerd. Omdat KPN in meerdere markten actief is, wordt gekozen voor een duidelijk afgebakende branche. Deze branche wordt vervolgens onderzocht met behulp van een passende analysemethodiek, zoals het vijfkrachtenmodel van Porter of het SGR-schema van Bain.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'cards',
+        title: 'Introductie brancheanalyse',
+        cards: [
+          {
+            title: 'Waarom afbakenen?',
+            text: 'Het is niet praktisch om voor alle branches waarin KPN actief is een aparte brancheanalyse te maken. Daarom wordt binnen deze opdracht een specifieke branche gekozen. Deze branche moet duidelijk worden afgebakend en uitgebreid worden geanalyseerd. Hierbij kan gebruik worden gemaakt van het vijfkrachtenmodel van Porter of het SGR-schema van Bain.',
+          },
+        ],
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: ['Vul hier later bronnen voor de brancheanalyse toe.'],
+    conclusie: 'Hoofdstuk 2 vormt de basis voor opdracht 2.1, waarin de gekozen KPN-branche inhoudelijk wordt uitgewerkt.',
+  },
+  {
+    id: 'opdracht-2-1',
+    opdrachtNummer: '2.1',
+    titel: 'Brancheanalyse',
+    subtitel: 'Porter of SGR-schema voor een gekozen KPN-branche',
+    korteIntro: 'Voor de brancheanalyse wordt uitgegaan van een specifieke businessunit, divisie of markt waarin KPN actief is. De gekozen branche wordt duidelijk afgebakend, waarna de belangrijkste kenmerken, concurrentiekrachten en ontwikkelingen worden onderzocht.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'cards',
+        title: 'Keuze en afbakening van de branche',
+        cards: [
+          {
+            title: 'Gekozen branche',
+            text: 'Vul hier de gekozen branche in, bijvoorbeeld de Nederlandse telecommarkt, glasvezelmarkt, mobiele telefonie of zakelijke ICT-diensten. De gekozen branche moet aansluiten bij de activiteiten van KPN en voldoende informatie beschikbaar hebben voor een onderbouwde analyse.',
+          },
+          {
+            title: 'Afbakening',
+            text: 'Beschrijf hier duidelijk welke markt wordt onderzocht, welke producten of diensten hieronder vallen en welke onderdelen buiten de analyse worden gelaten.',
+            items: [
+              'Welke markt wordt onderzocht?',
+              'Welke klanten vallen binnen deze markt?',
+              'Welke producten of diensten horen erbij?',
+              'Welke concurrenten worden meegenomen?',
+              'Welke geografische markt wordt onderzocht?',
+            ],
+          },
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Gekozen analysemethode',
+        cards: [
+          {
+            title: 'Analysemethode',
+            text: 'Voor deze brancheanalyse kan gebruik worden gemaakt van het vijfkrachtenmodel van Porter of het SGR-schema van Bain. De gekozen methode moet helpen om de aantrekkelijkheid, concurrentiedruk en ontwikkelingen binnen de branche te beoordelen.',
+          },
+          {
+            title: 'Aanbevolen voor KPN',
+            text: 'Porter\'s vijfkrachtenmodel is aanbevolen voor KPN, omdat de methode goed past bij analyse van concurrentiedruk, toetredingsdrempels, leveranciersmacht, klantmacht en substituten in de telecomsector.',
+          },
+        ],
+      },
+      {
+        type: 'iconCards',
+        title: 'Methode-cards',
+        cards: [
+          { title: 'Porter\'s vijfkrachtenmodel', icon: 'TrendingUp', text: 'Geschikt om de concurrentiedruk binnen de branche te analyseren aan de hand van vijf krachten.' },
+          { title: 'SGR-schema van Bain', icon: 'Building', text: 'Geschikt om de structuur, het gedrag en het resultaat van de branche te analyseren.' },
+        ],
+      },
+      {
+        type: 'iconCards',
+        title: 'Porter\'s vijfkrachtenmodel',
+        cards: [
+          { title: 'Dreiging van nieuwe toetreders', icon: 'Building', text: 'Analyseer hier hoe makkelijk nieuwe bedrijven kunnen toetreden tot de gekozen telecombranche.' },
+          { title: 'Onderhandelingsmacht van leveranciers', icon: 'Network', text: 'Analyseer hier de invloed van leveranciers, technologiepartners en netwerkleveranciers op KPN.' },
+          { title: 'Onderhandelingsmacht van afnemers', icon: 'Users', text: 'Analyseer hier hoeveel macht consumenten, zakelijke klanten en overheden hebben.' },
+          { title: 'Dreiging van substituten', icon: 'RadioTower', text: 'Analyseer hier alternatieven voor de diensten van KPN, zoals andere netwerken, mobiele alternatieven of digitale communicatieplatforms.' },
+          { title: 'Rivaliteit tussen bestaande concurrenten', icon: 'Shield', text: 'Analyseer hier de concurrentie tussen KPN, VodafoneZiggo, Odido en andere aanbieders.' },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Belangrijkste concurrenten',
+        columns: ['Concurrent', 'Marktpositie', 'Relevantie voor KPN'],
+        rows: [
+          ['VodafoneZiggo', 'Grote concurrent in internet, televisie en mobiele diensten', 'Sterke concurrent door combinatie van vaste en mobiele diensten'],
+          ['Odido', 'Concurrent op mobiele telefonie en internet', 'Relevante speler in prijs- en netwerkconcurrentie'],
+          ['Delta Fiber', 'Concurrent in glasvezel', 'Relevant binnen regionale glasvezeluitrol'],
+          ['Online.nl / Budget Thuis', 'Prijsgerichte aanbieders', 'Relevant voor prijsdruk in de consumentenmarkt'],
+        ],
+      },
+      {
+        type: 'iconCards',
+        title: 'Externe ontwikkelingen',
+        cards: [
+          { title: 'Groei van glasvezel', icon: 'Network', text: 'Vul hier de toelichting en bron toe.' },
+          { title: 'Verdere uitrol van 5G', icon: 'RadioTower', text: 'Vul hier de toelichting en bron toe.' },
+          { title: 'Toenemende vraag naar cybersecurity', icon: 'Shield', text: 'Vul hier de toelichting en bron toe.' },
+          { title: 'Prijsdruk consumentenmarkt', icon: 'TrendingUp', text: 'Vul hier de toelichting en bron toe.' },
+          { title: 'Regulering door ACM en overheid', icon: 'Building', text: 'Vul hier de toelichting en bron toe.' },
+          { title: 'Duurzaamheid en energieverbruik', icon: 'Leaf', text: 'Vul hier de toelichting en bron toe.' },
+          { title: 'Digitalisering huishoudens en bedrijven', icon: 'Users', text: 'Vul hier de toelichting en bron toe.' },
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Samenvatting branchekenmerken',
+        cards: [
+          {
+            title: 'Belangrijkste kenmerken van de branche',
+            text: 'Vat hier de belangrijkste kenmerken van de gekozen branche samen. Denk aan concurrentiedruk, groeikansen, risico\'s, technologische ontwikkelingen en de positie van KPN.',
+          },
+        ],
+      },
+      {
+        type: 'conclusion',
+        title: 'Voorlopige conclusie',
+        text: 'De branche waarin KPN actief is, wordt gekenmerkt door hoge investeringskosten, sterke concurrentie, technologische innovatie en toenemende aandacht voor digitale veiligheid en duurzaamheid. De exacte conclusie wordt verder aangevuld nadat de gekozen branche en analysemethode definitief zijn uitgewerkt.',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: [
+      'Vul hier later bronnen toe voor de gekozen branche.',
+      'Vul hier later bronnen toe over concurrenten, ACM, marktontwikkelingen en telecomdata.',
+    ],
+    conclusie: 'De definitieve conclusie van opdracht 2.1 wordt aangevuld nadat de branche en analysemethode inhoudelijk zijn uitgewerkt.',
+  },
 ]

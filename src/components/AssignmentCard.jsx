@@ -1,4 +1,4 @@
-import { CheckCircle, Eye, Leaf, ShieldCheck, Target, TrendingUp, Users } from 'lucide-react'
+import { BarChart3, Building, CheckCircle, Eye, Leaf, Network, RadioTower, Shield, ShieldCheck, Target, TrendingUp, Users } from 'lucide-react'
 import ImageBlock from './ImageBlock.jsx'
 import TableBlock from './TableBlock.jsx'
 
@@ -6,6 +6,11 @@ const icons = {
   CheckCircle,
   Eye,
   Leaf,
+  Network,
+  RadioTower,
+  Shield,
+  Building,
+  BarChart3,
   ShieldCheck,
   Target,
   TrendingUp,
@@ -29,6 +34,35 @@ function TextCards({ title, cards }) {
   )
 }
 
+function KPIGrid({ title, text, items }) {
+  return (
+    <section className="report-section">
+      <h3>{title}</h3>
+      {text && <p className="section-note">{text}</p>}
+      <div className="kpi-grid">
+        {items.map((item) => (
+          <article className="kpi-card" key={item.label}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+            {item.text && <p>{item.text}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function ImageSection({ title, images }) {
+  return (
+    <section className="report-section">
+      <h3>{title}</h3>
+      <div className="placeholder-grid">
+        {images.map((image) => <ImageBlock key={image.title} {...image} />)}
+      </div>
+    </section>
+  )
+}
+
 function IconCards({ title, cards }) {
   return (
     <section className="report-section">
@@ -44,6 +78,52 @@ function IconCards({ title, cards }) {
             </article>
           )
         })}
+      </div>
+    </section>
+  )
+}
+
+function BusinessModelCanvas({ title, badge, blocks, conclusion }) {
+  return (
+    <section className="report-section">
+      <div className="section-title-row">
+        <h3>{title}</h3>
+        {badge && <span className="status-badge">{badge}</span>}
+      </div>
+      <div className="bmc-grid">
+        {blocks.map((block) => (
+          <article className={`bmc-block ${block.area || ''}`} key={block.title}>
+            <h4>{block.title}</h4>
+            <p>{block.text}</p>
+          </article>
+        ))}
+      </div>
+      {conclusion && <AssessmentBlock text={conclusion} />}
+    </section>
+  )
+}
+
+function SevenSModel({ title, items, alignment, gaps }) {
+  return (
+    <section className="report-section">
+      <h3>{title}</h3>
+      <div className="seven-s-grid">
+        {items.map((item) => (
+          <article className="seven-s-card" key={item.title}>
+            <span>{item.title}</span>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+      <div className="split-report">
+        <article>
+          <h4>Samenhang en evenwicht</h4>
+          <p>{alignment}</p>
+        </article>
+        <article>
+          <h4>Hiaten en inconsistenties</h4>
+          <p>{gaps}</p>
+        </article>
       </div>
     </section>
   )
@@ -87,7 +167,11 @@ function AssessmentBlock({ text }) {
 
 function renderSection(section) {
   if (section.type === 'cards') return <TextCards key={section.title} {...section} />
+  if (section.type === 'kpis') return <KPIGrid key={section.title} {...section} />
+  if (section.type === 'images') return <ImageSection key={section.title} {...section} />
   if (section.type === 'iconCards') return <IconCards key={section.title} {...section} />
+  if (section.type === 'businessCanvas') return <BusinessModelCanvas key={section.title} {...section} />
+  if (section.type === 'sevenS') return <SevenSModel key={section.title} {...section} />
   if (section.type === 'table') return (
     <section className="report-section" key={section.title}>
       <TableBlock title={section.title} columns={section.columns} rows={section.rows} />
