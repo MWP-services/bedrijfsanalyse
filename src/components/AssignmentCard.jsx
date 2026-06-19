@@ -57,6 +57,28 @@ function KPIGrid({ title, text, items }) {
   )
 }
 
+function BarChart({ title, text, items }) {
+  const max = Math.max(...items.map((item) => item.value))
+
+  return (
+    <section className="report-section">
+      <h3>{title}</h3>
+      {text && <p className="section-note">{text}</p>}
+      <div className="bar-chart" role="img" aria-label={title}>
+        {items.map((item) => (
+          <div className="bar-chart-item" key={item.label}>
+            <div className="bar-chart-track">
+              <span style={{ height: `${(item.value / max) * 100}%` }} />
+            </div>
+            <strong>{item.displayValue}</strong>
+            <small>{item.label}</small>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function ImageSection({ title, images }) {
   return (
     <section className="report-section">
@@ -189,6 +211,7 @@ function renderSection(section) {
   if (section.type === 'chapterTwoBrancheAnalyse') return <ChapterTwoBrancheAnalyse key={section.title} />
   if (section.type === 'chapterThreeSolvability') return <ChapterThreeSolvability key={section.title} />
   if (section.type === 'kpis') return <KPIGrid key={section.title} {...section} />
+  if (section.type === 'barChart') return <BarChart key={section.title} {...section} />
   if (section.type === 'images') return <ImageSection key={section.title} {...section} />
   if (section.type === 'iconCards') return <IconCards key={section.title} {...section} />
   if (section.type === 'businessCanvas') return <BusinessModelCanvas key={section.title} {...section} />

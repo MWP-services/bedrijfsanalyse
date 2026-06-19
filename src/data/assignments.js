@@ -465,4 +465,261 @@ export const assignmentItems = [
     bronnen: financialSources,
     conclusie: 'KPN heeft veel activa nodig om omzet te genereren. Dit past bij de telecomsector en onderstreept dat de netwerkinfrastructuur zowel een kostenpost als een strategisch voordeel is.',
   },
+  {
+    id: 'opdracht-3-5',
+    opdrachtNummer: '3.5',
+    titel: 'Werknemerscijfers',
+    subtitel: 'Productiviteit en efficientie per medewerker',
+    korteIntro: 'Werknemerscijfers geven inzicht in de productiviteit en efficientie van KPN. Door omzet en winst te relateren aan het aantal werknemers ontstaat een beeld van de prestaties per medewerker.',
+    volledigeTekst: 'Binnen de telecomsector worden deze cijfers steeds belangrijker door digitalisering, automatisering en de toepassing van kunstmatige intelligentie. Voor deze analyse wordt gekeken naar omzet per werknemer en nettowinst per werknemer.',
+    sections: [
+      {
+        type: 'cards',
+        title: 'Formules',
+        cards: [
+          {
+            title: 'Omzet per werknemer',
+            text: 'Omzet / aantal FTE. Dit geeft weer hoeveel omzet gemiddeld door een werknemer wordt gerealiseerd.',
+          },
+          {
+            title: 'Nettowinst per werknemer',
+            text: 'Nettowinst / aantal FTE. Dit geeft aan hoeveel winst gemiddeld door een werknemer wordt gegenereerd.',
+          },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Financieel overzicht werknemerscijfers',
+        columns: ['Kengetal', 'KPN 2025', 'KPN 2024', 'VodafoneZiggo 2025'],
+        rows: [
+          ['Aantal FTE', '9.136', '9.664', '5.891'],
+          ['Omzet', 'EUR 5.797 mln', 'EUR 5.603 mln', 'EUR 3.999 mln'],
+          ['Omzet per werknemer', 'EUR 635.000', 'EUR 580.000', 'EUR 679.000'],
+          ['Nettowinst per werknemer', 'EUR 93.500', 'EUR 87.700', 'Negatief'],
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Analyse en beoordeling',
+        cards: [
+          {
+            title: 'Stijgende arbeidsproductiviteit',
+            text: 'Het aantal medewerkers bij KPN is in 2025 afgenomen ten opzichte van 2024, terwijl de omzet juist is gestegen. Hierdoor nam de omzet per werknemer toe van ongeveer EUR 580.000 naar EUR 635.000.',
+          },
+          {
+            title: 'Digitalisering en automatisering',
+            text: 'De stijging kan grotendeels worden verklaard door verdere digitalisering van processen, automatisering van werkzaamheden en het gebruik van kunstmatige intelligentie binnen de organisatie.',
+          },
+          {
+            title: 'Hogere winst per medewerker',
+            text: 'Ook de nettowinst per werknemer is gestegen. Dit betekent dat de hogere productiviteit niet alleen leidt tot meer omzet, maar ook resulteert in hogere winstgevendheid.',
+          },
+          {
+            title: 'Vergelijking met VodafoneZiggo',
+            text: 'VodafoneZiggo realiseert een iets hogere omzet per werknemer, maar maakt verlies. KPN zet haar omzet wel om in winst en presteert daardoor sterker op efficientie en waardecreatie.',
+          },
+        ],
+      },
+      {
+        type: 'conclusion',
+        title: 'Eindbeoordeling opdracht 3.5',
+        text: 'KPN slaagt erin om meer te doen met relatief minder medewerkers. De stijgende omzet per werknemer en hogere winst per werknemer wijzen op een efficiente organisatie en een succesvolle digitaliseringsstrategie. In vergelijking met VodafoneZiggo presteert KPN op dit gebied sterker.',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: [
+      'Koninklijke KPN N.V. (2025). Integrated Annual Report 2025. KPN.',
+      'VodafoneZiggo Group B.V. (2025). Integrated Annual Report 2025. VodafoneZiggo.',
+    ],
+    conclusie: 'KPN laat een duidelijke verbetering van arbeidsproductiviteit en winst per medewerker zien en presteert hierdoor sterker dan VodafoneZiggo op waardecreatie.',
+  },
+  {
+    id: 'opdracht-3-6',
+    opdrachtNummer: '3.6',
+    titel: 'Omgevingsanalyse',
+    subtitel: 'Zeven belangrijkste omgevingsvariabelen voor KPN',
+    korteIntro: 'De prestaties van KPN worden sterk beinvloed door ontwikkelingen in de externe omgeving. Op basis van de macro-omgeving en taakomgeving zijn zeven omgevingsvariabelen geselecteerd die de grootste invloed hebben op de huidige en toekomstige prestaties.',
+    volledigeTekst: 'Deze factoren zijn nauw verbonden met de ontwikkelingen binnen de Nederlandse telecomsector en sluiten aan bij de brancheanalyse uit hoofdstuk 2.',
+    sections: [
+      {
+        type: 'iconCards',
+        title: 'Zeven omgevingsvariabelen',
+        cards: [
+          {
+            title: 'Technologische ontwikkelingen',
+            icon: 'Network',
+            text: 'Glasvezel, 5G, cloudoplossingen en kunstmatige intelligentie zorgen voor groeikansen, maar vereisen ook hoge investeringen in netwerkverbeteringen.',
+          },
+          {
+            title: 'Concurrentie',
+            icon: 'Target',
+            text: 'KPN, VodafoneZiggo en Odido domineren de Nederlandse telecommarkt. Door sterke concurrentie staan prijzen, marges en klantbehoud onder druk.',
+          },
+          {
+            title: 'Wet- en regelgeving',
+            icon: 'ShieldCheck',
+            text: 'Privacy, cybersecurity, netwerkveiligheid, duurzaamheid en toezicht door de ACM hebben directe invloed op de bedrijfsvoering.',
+          },
+          {
+            title: 'Economische ontwikkelingen',
+            icon: 'TrendingUp',
+            text: 'Inflatie, rente en koopkracht beinvloeden kosten en vraag. Telecom blijft wel een essentiele dienst, waardoor de vraag relatief stabiel blijft.',
+          },
+          {
+            title: 'Arbeidsmarkt',
+            icon: 'Users',
+            text: 'Tekorten aan technisch personeel en IT-specialisten kunnen de aanleg van glasvezel, cybersecurity en digitale dienstverlening vertragen.',
+          },
+          {
+            title: 'Duurzaamheid',
+            icon: 'Leaf',
+            text: 'Overheden, investeerders en klanten stellen hogere eisen aan klimaatdoelen, energiezuinige netwerken en circulaire bedrijfsvoering.',
+          },
+          {
+            title: 'Cybersecurity',
+            icon: 'Shield',
+            text: 'Als beheerder van digitale infrastructuur moet KPN cyberaanvallen, reputatieschade en verstoringen van diensten voorkomen.',
+          },
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Analyse en beoordeling',
+        cards: [
+          {
+            title: 'Grootste invloed',
+            text: 'Technologische ontwikkelingen, concurrentie en cybersecurity hebben momenteel de grootste invloed op de prestaties van KPN. Glasvezel en 5G bieden kansen, maar vragen omvangrijke investeringen.',
+          },
+          {
+            title: 'Concurrentiedruk',
+            text: 'VodafoneZiggo en Odido investeren eveneens in netwerken. KPN moet zich daarom blijven onderscheiden met netwerkkwaliteit, service en innovatieve diensten.',
+          },
+          {
+            title: 'Kostenstructuur',
+            text: 'Regelgeving, duurzaamheid, economische ontwikkelingen en arbeidsmarktkrapte hebben vooral invloed op de kostenstructuur en strategische keuzes van KPN.',
+          },
+        ],
+      },
+      {
+        type: 'conclusion',
+        title: 'Eindbeoordeling opdracht 3.6',
+        text: 'De externe omgeving van KPN biedt zowel kansen als bedreigingen. De grootste kansen liggen in glasvezel, 5G, digitalisering en zakelijke IT-diensten. De belangrijkste bedreigingen zijn hoge investeringskosten, toenemende concurrentie, personeelstekorten en cyberrisico\'s. Dankzij haar sterke marktpositie, omvangrijke netwerk en voortdurende investeringen lijkt KPN goed gepositioneerd om hierop in te spelen.',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: [
+      'Koninklijke KPN N.V. (2025). Integrated Annual Report 2025. KPN.',
+      'Porter, M. E. (2008). The five competitive forces that shape strategy. Harvard Business Review, 86(1), 78-93.',
+      'VodafoneZiggo Group B.V. (2025). Integrated Annual Report 2025. VodafoneZiggo.',
+    ],
+    conclusie: 'KPN heeft kansen door glasvezel, 5G en digitalisering, maar moet rekening houden met concurrentiedruk, investeringskosten, personeelstekorten en cyberrisico\'s.',
+  },
+  {
+    id: 'opdracht-3-7',
+    opdrachtNummer: '3.7',
+    titel: 'Beleggingskengetallen',
+    subtitel: 'WPA, koersontwikkeling, dividend en vrije kasstroom',
+    korteIntro: 'Voor beleggers zijn niet alleen winstcijfers belangrijk, maar vooral de vraag of een onderneming op lange termijn waarde kan creeren voor aandeelhouders.',
+    volledigeTekst: 'In deze beleggingsanalyse wordt gekeken naar winst per aandeel, dividend, vrije kasstroom en de ontwikkeling van de aandelenkoers. Deze kengetallen vormen samen een belangrijke basis voor een professioneel beleggingsadvies.',
+    sections: [
+      {
+        type: 'table',
+        title: 'Ontwikkeling van de winst per aandeel',
+        columns: ['Jaar', 'WPA'],
+        rows: [
+          ['2021', 'EUR 0,31'],
+          ['2022', 'EUR 0,18'],
+          ['2023', 'EUR 0,20'],
+          ['2024', 'EUR 0,20'],
+          ['2025', 'EUR 0,21'],
+        ],
+        assessment: 'De WPA daalde sterk in 2022, maar herstelde daarna naar een stabiel en licht stijgend niveau. Voor een volwassen telecombedrijf is de stijging naar EUR 0,21 een positief signaal.',
+      },
+      {
+        type: 'barChart',
+        title: 'Grafiek ontwikkeling WPA',
+        text: 'Winst per aandeel van KPN over 2021-2025.',
+        items: [
+          { label: '2021', value: 0.31, displayValue: 'EUR 0,31' },
+          { label: '2022', value: 0.18, displayValue: 'EUR 0,18' },
+          { label: '2023', value: 0.20, displayValue: 'EUR 0,20' },
+          { label: '2024', value: 0.20, displayValue: 'EUR 0,20' },
+          { label: '2025', value: 0.21, displayValue: 'EUR 0,21' },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Relatie tussen WPA en ultimo koers',
+        columns: ['Jaar', 'Ultimo koers'],
+        rows: [
+          ['2023', 'EUR 3,12'],
+          ['2024', 'EUR 3,56'],
+          ['2025', 'EUR 3,98'],
+        ],
+        assessment: 'De koers is sterker gestegen dan de WPA. Dit wijst erop dat beleggers niet alleen naar de huidige winst kijken, maar vooral vertrouwen hebben in toekomstige prestaties, glasvezelgroei, marktpositie en kasstromen.',
+      },
+      {
+        type: 'table',
+        title: 'Dividend per aandeel',
+        columns: ['Jaar', 'Dividend per aandeel'],
+        rows: [
+          ['2023', 'EUR 0,15'],
+          ['2024', 'EUR 0,17'],
+          ['2025', 'EUR 0,182'],
+        ],
+        assessment: 'De stijgende dividenduitkeringen laten zien dat het management vertrouwen heeft in de toekomstige financiele positie van KPN. Voor defensieve beleggers is dit een belangrijk pluspunt.',
+      },
+      {
+        type: 'cards',
+        title: 'Sterke punten voor beleggers',
+        cards: [
+          {
+            title: 'Stabiele winstontwikkeling',
+            text: 'KPN laat na 2022 een stabiele en licht stijgende WPA zien. Dit ondersteunt het beeld van een volwassen en winstgevende onderneming.',
+          },
+          {
+            title: 'Vrije kasstroom',
+            text: 'De vrije kasstroom steeg van ongeveer EUR 886 miljoen in 2023 naar ruim EUR 950 miljoen in 2025. Daardoor kan KPN blijven investeren en aandeelhouders belonen.',
+          },
+          {
+            title: 'Dividend en aandeleninkoop',
+            text: 'KPN keert een groot deel van de vrije kasstromen uit via dividend en aandeleninkoop. Een lager aantal uitstaande aandelen kan de WPA op termijn verder ondersteunen.',
+          },
+          {
+            title: 'Defensief profiel',
+            text: 'De stabiele inkomsten uit abonnementen maken KPN minder gevoelig voor economische schommelingen dan veel ondernemingen in cyclische sectoren.',
+          },
+        ],
+      },
+      {
+        type: 'cards',
+        title: 'Zwakke punten en risico\'s',
+        cards: [
+          {
+            title: 'Beperkte groei',
+            text: 'De Nederlandse telecommarkt is volwassen. Hierdoor blijven de groeimogelijkheden beperkt en zal de winstgroei waarschijnlijk gematigd zijn.',
+          },
+          {
+            title: 'Kapitaalintensief',
+            text: 'Glasvezel, 5G en cybersecurity vragen jaarlijks hoge investeringen. Een groot deel van de kasstromen blijft nodig voor onderhoud en uitbreiding van infrastructuur.',
+          },
+          {
+            title: 'Concurrentie',
+            text: 'VodafoneZiggo en Odido kunnen druk zetten op prijzen, marges en klantbehoud. Dit blijft een belangrijk aandachtspunt voor toekomstige winstontwikkeling.',
+          },
+        ],
+      },
+      {
+        type: 'conclusion',
+        title: 'Eindbeoordeling en beleggingsadvies',
+        text: 'Op basis van de beleggingskengetallen kan KPN worden beoordeeld als een aantrekkelijk aandeel voor defensieve beleggers. De onderneming combineert een stabiele winstontwikkeling met een groeiend dividend, sterke vrije kasstromen en een solide marktpositie. Voor beleggers die snelle groei zoeken zijn er aantrekkelijkere alternatieven, maar voor beleggers die stabiliteit, voorspelbare inkomsten en een relatief beperkt risicoprofiel zoeken, past een houden/kopen advies.',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: financialSources,
+    conclusie: 'KPN is vooral aantrekkelijk voor defensieve beleggers door stabiele winst, groeiend dividend, sterke vrije kasstroom en een solide marktpositie.',
+  },
 ]
