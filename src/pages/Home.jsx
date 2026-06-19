@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, Building2, LineChart, Shield, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, BarChart3, Building2, Shield, Target, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import AnalysisCard from '../components/AnalysisCard.jsx'
 import NewsCard from '../components/NewsCard.jsx'
@@ -11,7 +11,6 @@ const cards = [
   { title: 'Telecombranche', text: 'Analyse van de Nederlandse telecommarkt, concurrentie, regulering en glasvezelontwikkelingen.', icon: Target, to: '/analyse' },
   { title: 'Financiele analyse', text: 'KPN-ratio\'s voor solvabiliteit, liquiditeit, rentabiliteit en beleggingswaarde.', icon: BarChart3, to: '/analyse' },
   { title: 'Risicoanalyse', text: 'Commerciele, operationele en financiele risico\'s voor KPN professioneel beoordeeld.', icon: Shield, to: '/risicoanalyse' },
-  { title: 'SWOT KPN', text: 'KPN\'s sterktes, zwaktes, kansen en bedreigingen met onderbouwing.', icon: LineChart, to: '/swot' },
   { title: 'Beleggingsadvies KPN', text: 'Een helder buy, hold of sell advies voor KPN op basis van de analyse.', icon: TrendingUp, to: '/beleggingsadvies' },
 ]
 

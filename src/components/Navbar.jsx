@@ -1,13 +1,13 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 const navItems = [
   ['Home', '/'],
   ['Over de onderneming', '/over-de-onderneming'],
   ['Analyse', '/analyse'],
   ['Risicoanalyse', '/risicoanalyse'],
-  ['SWOT', '/swot'],
   ['Beleggingsadvies', '/beleggingsadvies'],
   ['Nieuws', '/nieuws'],
   ['Uitgewerkte opdrachten', '/uitgewerkte-opdrachten'],
@@ -20,7 +20,9 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <NavLink className="brand" to="/" onClick={() => setOpen(false)}>
-        <span className="brand-mark">BA</span>
+        <span className="brand-logo">
+          <img src={logo} alt="KPN" />
+        </span>
         <span>
           <strong>KPN Analyse</strong>
           <small>KPN</small>

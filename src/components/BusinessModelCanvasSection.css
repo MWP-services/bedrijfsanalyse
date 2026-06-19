@@ -1,0 +1,237 @@
+.business-model-section {
+  margin: 28px 0;
+  padding: clamp(20px, 4vw, 30px);
+  border: 1px solid rgba(0, 161, 93, .22);
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4fbf8 100%);
+  box-shadow: 0 16px 42px rgba(7, 36, 31, .08);
+}
+
+.business-model-header {
+  max-width: 980px;
+  margin-bottom: 20px;
+}
+
+.business-model-header h3 {
+  margin-bottom: 10px;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+}
+
+.business-model-section .infographic-preview-card {
+  max-width: 920px;
+  margin-bottom: 28px;
+}
+
+.bmc-visual {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(0, 161, 93, .22);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.infographic-modal-visual .bmc-visual {
+  min-width: 860px;
+}
+
+.bmc-visual-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.bmc-visual-header span {
+  color: var(--green-dark);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: .78rem;
+  letter-spacing: .06em;
+}
+
+.bmc-visual-header h3 {
+  color: var(--navy);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.bmc-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-areas:
+    "partners activities value relations customers"
+    "partners resources value channels customers"
+    "costs costs costs revenue revenue";
+  gap: 10px;
+}
+
+.bmc-visual-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 160px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--ink);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcfa 100%);
+  box-shadow: 0 10px 24px rgba(7, 36, 31, .06);
+  text-align: left;
+}
+
+button.bmc-visual-card {
+  cursor: pointer;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+button.bmc-visual-card:hover,
+button.bmc-visual-card:focus-visible,
+button.bmc-visual-card.active {
+  border-color: rgba(0, 92, 185, .65);
+  box-shadow: 0 0 0 4px rgba(0, 161, 93, .14), 0 14px 30px rgba(7, 36, 31, .1);
+  transform: translateY(-2px);
+  outline: 0;
+}
+
+.bmc-visual-card.customers { grid-area: customers; }
+.bmc-visual-card.value { grid-area: value; background: linear-gradient(180deg, var(--mint) 0%, #ffffff 100%); border-color: rgba(0, 161, 93, .35); }
+.bmc-visual-card.channels { grid-area: channels; }
+.bmc-visual-card.relations { grid-area: relations; }
+.bmc-visual-card.revenue { grid-area: revenue; min-height: 130px; }
+.bmc-visual-card.resources { grid-area: resources; }
+.bmc-visual-card.activities { grid-area: activities; }
+.bmc-visual-card.partners { grid-area: partners; }
+.bmc-visual-card.costs { grid-area: costs; min-height: 130px; }
+
+.bmc-number {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--green);
+  font-weight: 900;
+}
+
+.bmc-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  color: var(--green-dark);
+  background: var(--mint);
+}
+
+.bmc-visual-card strong {
+  padding-right: 30px;
+  color: var(--navy);
+  line-height: 1.15;
+}
+
+.bmc-visual-card small {
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.bmc-visual-card ul,
+.business-model-detail-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.business-model-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.business-model-detail-card {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(7, 36, 31, .06);
+}
+
+.business-model-detail-card p {
+  margin: 0;
+  color: #304b45;
+}
+
+.business-model-conclusion {
+  margin-top: 24px;
+}
+
+.infographic-preview-media .bmc-visual {
+  height: 260px;
+  overflow: hidden;
+}
+
+.infographic-preview-media .bmc-visual-card {
+  min-height: 88px;
+  padding: 9px;
+  gap: 4px;
+}
+
+.infographic-preview-media .bmc-icon,
+.infographic-preview-media .bmc-visual-card ul {
+  display: none;
+}
+
+.infographic-preview-media .bmc-number {
+  width: 22px;
+  height: 22px;
+  font-size: .75rem;
+}
+
+.infographic-preview-media .bmc-visual-card strong {
+  font-size: .76rem;
+}
+
+.infographic-preview-media .bmc-visual-card small {
+  font-size: .66rem;
+}
+
+@media (max-width: 1040px) {
+  .business-model-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bmc-visual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: none;
+  }
+
+  .bmc-visual-card {
+    grid-area: auto !important;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .business-model-section {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .business-model-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .infographic-modal-visual .bmc-visual {
+    min-width: 700px;
+  }
+}

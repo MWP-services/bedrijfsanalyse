@@ -1,0 +1,318 @@
+.infographic-preview-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(7, 36, 31, .08);
+}
+
+.infographic-preview-media {
+  display: grid;
+  min-height: 260px;
+  padding: 12px;
+  background: linear-gradient(135deg, #f8fcfa 0%, #ffffff 100%);
+}
+
+.infographic-preview-media img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.infographic-preview-body {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.infographic-preview-body > span {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--green-dark);
+  background: var(--mint);
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.infographic-preview-body h4 {
+  font-size: 1.2rem;
+}
+
+.infographic-preview-body p,
+.infographic-preview-body small {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.infographic-open-button {
+  width: fit-content;
+  margin-top: 4px;
+  border: 0;
+  cursor: pointer;
+}
+
+.infographic-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(7, 36, 31, .56);
+  backdrop-filter: blur(10px);
+  animation: infographicFade .18s ease;
+}
+
+.infographic-modal {
+  width: min(1380px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  border: 1px solid rgba(223, 234, 229, .9);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgba(7, 36, 31, .32);
+  animation: infographicRise .22s ease;
+}
+
+.infographic-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(18px, 3vw, 26px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(12px);
+}
+
+.infographic-modal-header span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--green-dark);
+  background: var(--mint);
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.infographic-modal-header h2 {
+  font-size: clamp(1.5rem, 3vw, 2.45rem);
+}
+
+.infographic-modal-header p {
+  margin: 8px 0 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.infographic-modal-close,
+.infographic-info-close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(7, 36, 31, .1);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.infographic-modal-close:hover,
+.infographic-modal-close:focus-visible,
+.infographic-info-close:hover,
+.infographic-info-close:focus-visible {
+  color: #fff;
+  background: var(--green);
+  transform: rotate(90deg);
+  outline: 0;
+}
+
+.infographic-modal-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .36fr);
+  gap: 18px;
+  padding: clamp(16px, 3vw, 26px);
+}
+
+.infographic-modal-visual {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.infographic-image-stage {
+  position: relative;
+  width: 100%;
+  min-width: 820px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.infographic-image-stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.infographic-hotspot {
+  position: absolute;
+  display: grid;
+  place-items: start;
+  border: 1px solid rgba(0, 122, 70, .44);
+  border-radius: 14px;
+  padding: 8px;
+  color: var(--green-dark);
+  background: rgba(0, 161, 93, .1);
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.infographic-hotspot span {
+  max-width: 100%;
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 8px 18px rgba(7, 36, 31, .09);
+  font-size: .74rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.infographic-hotspot:hover,
+.infographic-hotspot:focus-visible,
+.infographic-hotspot.active {
+  border-color: rgba(0, 92, 185, .72);
+  background: rgba(0, 92, 185, .14);
+  box-shadow: 0 0 0 4px rgba(0, 161, 93, .16);
+  transform: translateY(-1px);
+  outline: 0;
+}
+
+.infographic-info-panel {
+  position: sticky;
+  top: 108px;
+  align-self: start;
+  min-height: 320px;
+  padding: 22px;
+  border: 1px solid rgba(0, 161, 93, .26);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4fbf8 100%);
+  box-shadow: 0 14px 36px rgba(7, 36, 31, .08);
+}
+
+.infographic-info-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.4rem;
+}
+
+.infographic-info-panel h3 {
+  padding-right: 34px;
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+}
+
+.infographic-info-panel p {
+  margin: 12px 0 16px;
+  color: #304b45;
+}
+
+.infographic-info-panel ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.infographic-info-panel li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.infographic-info-panel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .58em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green), #005cb9);
+}
+
+.infographic-conclusion {
+  margin-top: 16px !important;
+  padding: 14px;
+  border: 1px solid rgba(0, 161, 93, .24);
+  border-radius: 14px;
+  color: var(--ink) !important;
+  background: #fff;
+}
+
+@keyframes infographicFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes infographicRise {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 900px) {
+  .infographic-modal-backdrop {
+    align-items: end;
+    padding: 10px;
+  }
+
+  .infographic-modal {
+    max-height: calc(100vh - 20px);
+    border-radius: 20px;
+  }
+
+  .infographic-modal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .infographic-info-panel {
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+
+  .infographic-image-stage {
+    min-width: 760px;
+  }
+
+  .infographic-open-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

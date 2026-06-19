@@ -1,0 +1,140 @@
+.kpn-overview-infographic {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid rgba(0, 161, 93, .22);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(233, 248, 241, .95), rgba(255, 255, 255, .98)),
+    #fff;
+}
+
+.infographic-modal-visual .kpn-overview-infographic {
+  min-width: 760px;
+}
+
+.kpn-overview-header {
+  display: grid;
+  gap: 5px;
+  padding-bottom: 4px;
+}
+
+.kpn-overview-header span {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #fff;
+  background: var(--green);
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+.kpn-overview-header h3 {
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+  color: var(--navy);
+}
+
+.kpn-overview-header p {
+  margin: 0;
+  color: #31524a;
+  font-weight: 700;
+}
+
+.kpn-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.kpn-overview-card {
+  display: grid;
+  gap: 8px;
+  min-height: 122px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(7, 36, 31, .06);
+  text-align: left;
+}
+
+button.kpn-overview-card {
+  cursor: pointer;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+button.kpn-overview-card:hover,
+button.kpn-overview-card:focus-visible,
+button.kpn-overview-card.active {
+  border-color: rgba(0, 92, 185, .65);
+  box-shadow: 0 0 0 4px rgba(0, 161, 93, .14), 0 14px 30px rgba(7, 36, 31, .1);
+  transform: translateY(-2px);
+  outline: 0;
+}
+
+.kpn-overview-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  color: var(--green-dark);
+  background: var(--mint);
+}
+
+.kpn-overview-card strong {
+  color: var(--navy);
+  line-height: 1.18;
+}
+
+.kpn-overview-card small {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.infographic-preview-media .kpn-overview-infographic {
+  height: 260px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.infographic-preview-media .kpn-overview-header p {
+  display: none;
+}
+
+.infographic-preview-media .kpn-overview-grid {
+  gap: 7px;
+}
+
+.infographic-preview-media .kpn-overview-card {
+  min-height: 74px;
+  padding: 9px;
+  gap: 5px;
+}
+
+.infographic-preview-media .kpn-overview-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.infographic-preview-media .kpn-overview-card strong {
+  font-size: .78rem;
+}
+
+.infographic-preview-media .kpn-overview-card small {
+  font-size: .68rem;
+}
+
+@media (max-width: 680px) {
+  .kpn-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .infographic-modal-visual .kpn-overview-infographic {
+    min-width: 680px;
+  }
+}

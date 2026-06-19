@@ -3,10 +3,27 @@
 // Afbeeldingen zet je in public/images en verwijs je met src: '/images/bestandsnaam.png'.
 // Opdracht 1.3 is bewust als placeholder ingericht; vul later de definitieve canvasblokken hieronder aan.
 
-const kpnImages = [
-  { title: 'KPN in een oogopslag', caption: 'Plaats hier de infographic van KPN in een oogopslag.', src: '' },
-  { title: 'Ashridge Mission Model', caption: 'Plaats hier de infographic van het Ashridge Mission Model.', src: '' },
-  { title: 'Stakeholderanalyse en krachtenveld', caption: 'Plaats hier de infographic van stakeholderanalyse en krachtenveld.', src: '' },
+const financialSources = [
+  {
+    title: 'Beurs FD - KPN Koninklijke | Bedrijfsgegevens',
+    note: 'Gebruikt voor omzet, EBITDA, nettowinst, totaal activa, ROE, ROA, dividend en rentedekking.',
+    url: 'https://beurs.fd.nl/noteringen/11754/kpn-koninklijke',
+  },
+  {
+    title: 'Beurs FD - KPN Koninklijke | Kerncijfers',
+    note: 'Gebruikt voor balansgegevens, kengetallen, vlottende activa, kortlopende schulden en activiteitskengetallen.',
+    url: 'https://beurs.fd.nl/noteringen/11754/kpn-koninklijke/kerncijfers',
+  },
+  {
+    title: 'KPN Integrated Annual Report 2025',
+    note: 'Gebruikt voor service revenues, adjusted EBITDA AL, capex, free cash flow, dividend en ROCE.',
+    url: 'https://ir.kpn.com/financials/annual-reports.htm',
+  },
+  {
+    title: 'KPN Investor Relations - jaarresultaten 2025',
+    note: 'Gebruikt voor toelichting op jaarresultaten, groei, outlook, investeringen en strategie.',
+    url: 'https://ir.kpn.com/news-and-events/press-releases.htm',
+  },
 ]
 
 export const assignmentItems = [
@@ -32,9 +49,8 @@ export const assignmentItems = [
     volledigeTekst: '',
     sections: [
       {
-        type: 'images',
-        title: 'Visuele ondersteuning',
-        images: kpnImages,
+        type: 'kpnInfographics',
+        title: 'Interactieve infographics bij 1.1',
       },
       {
         type: 'cards',
@@ -185,9 +201,8 @@ export const assignmentItems = [
         ],
       },
       {
-        type: 'images',
-        title: 'Vergelijking KPN en VodafoneZiggo',
-        images: [{ title: 'KPN vs VodafoneZiggo/Ziggo vergelijking', caption: 'Plaats hier de KPN vs VodafoneZiggo/Ziggo vergelijking.', src: '' }],
+        type: 'sustainabilityInfographic',
+        title: 'Interactieve infographic: duurzaamheid en greenwashing',
       },
       {
         type: 'conclusion',
@@ -203,33 +218,20 @@ export const assignmentItems = [
   {
     id: 'opdracht-1-3',
     opdrachtNummer: '1.3',
-    titel: 'Business Model Canvas',
-    subtitel: 'Nog aan te vullen',
-    korteIntro: 'In deze opdracht wordt het bedrijfsmodel van KPN samengevat aan de hand van de negen bouwstenen van het Business Model Canvas. De onderstaande canvasstructuur is alvast ingericht, zodat de definitieve analyse later eenvoudig kan worden aangevuld.',
+    titel: 'Business Model Canvas KPN',
+    subtitel: 'Negen bouwstenen van het bedrijfsmodel',
+    korteIntro: 'Het Business Model Canvas laat zien hoe KPN waarde creeert, levert en verdient. Het model bestaat uit negen bouwstenen die samen inzicht geven in de klanten, waardepropositie, kanalen, klantrelaties, inkomstenstromen, kernmiddelen, kernactiviteiten, partners en kostenstructuur van KPN.',
     volledigeTekst: '',
     sections: [
       {
-        type: 'businessCanvas',
-        title: 'Business Model Canvas KPN',
-        badge: 'Nog aan te vullen',
-        conclusion: 'Vul hier later de conclusie van het Business Model Canvas in.',
-        blocks: [
-          { title: 'Klantsegmenten', area: 'customers', text: 'Vul hier de belangrijkste klantgroepen van KPN in, zoals consumenten, zakelijke klanten, overheden en partners.' },
-          { title: 'Waardepropositie', area: 'value', text: 'Vul hier in welke waarde KPN levert, zoals betrouwbare connectiviteit, veilige digitale infrastructuur, glasvezel, 5G en digitale diensten.' },
-          { title: 'Kanalen', area: 'channels', text: 'Vul hier in via welke kanalen KPN klanten bereikt, zoals online, winkels, klantenservice, zakelijke verkoop en partners.' },
-          { title: 'Klantrelaties', area: 'relations', text: 'Vul hier in hoe KPN klantrelaties onderhoudt, bijvoorbeeld via service, abonnementen, selfservice en persoonlijke zakelijke ondersteuning.' },
-          { title: 'Inkomstenstromen', area: 'revenue', text: 'Vul hier in waar KPN omzet uit haalt, zoals abonnementen, zakelijke contracten, internet, mobiele telefonie en digitale diensten.' },
-          { title: 'Key resources', area: 'resources', text: 'Vul hier de belangrijkste middelen in, zoals glasvezelnetwerk, 5G-netwerk, merknaam, medewerkers, IT-systemen en data-infrastructuur.' },
-          { title: 'Kernactiviteiten', area: 'activities', text: 'Vul hier de belangrijkste activiteiten in, zoals netwerkbeheer, innovatie, cybersecurity, klantenservice en verkoop.' },
-          { title: 'Key partners', area: 'partners', text: 'Vul hier belangrijke partners in, zoals technologiepartners, leveranciers, Glaspoort, overheid, ACM en zakelijke partners.' },
-          { title: 'Kostenstructuur', area: 'costs', text: 'Vul hier de belangrijkste kosten in, zoals netwerkinvesteringen, personeel, onderhoud, energie, marketing en technologie.' },
-        ],
+        type: 'businessModelCanvasKpn',
+        title: '1.3 Business Model Canvas KPN',
       },
     ],
     afbeeldingen: [],
     tabellen: [],
-    bronnen: ['Business Model Canvas model, later aanvullen met definitieve KPN-bronnen.'],
-    conclusie: 'Vul hier later de definitieve conclusie van opdracht 1.3 in.',
+    bronnen: ['Business Model Canvas model, toegepast op KPN.', 'KPN Integrated Annual Report 2024.', 'KPN corporate website en investor relations.'],
+    conclusie: 'Het Business Model Canvas laat zien dat KPN waarde creeert via betrouwbare digitale connectiviteit, sterke infrastructuur en klantgerichte dienstverlening, maar daarvoor blijvend grote investeringen in netwerken, innovatie en personeel nodig heeft.',
   },
   {
     id: 'opdracht-1-4',
@@ -293,110 +295,174 @@ export const assignmentItems = [
     id: 'opdracht-2-1',
     opdrachtNummer: '2.1',
     titel: 'Brancheanalyse',
-    subtitel: 'Porter of SGR-schema voor een gekozen KPN-branche',
-    korteIntro: 'Voor de brancheanalyse wordt uitgegaan van een specifieke businessunit, divisie of markt waarin KPN actief is. De gekozen branche wordt duidelijk afgebakend, waarna de belangrijkste kenmerken, concurrentiekrachten en ontwikkelingen worden onderzocht.',
+    subtitel: 'Nederlandse telecomsector en het Vijfkrachtenmodel van Porter',
+    korteIntro: 'Voor de brancheanalyse is gekozen voor de Nederlandse telecomsector, waarin KPN actief is als aanbieder van mobiele en vaste telecomdiensten, internet, glasvezel, 5G en zakelijke digitale diensten. De analyse wordt uitgewerkt aan de hand van het Vijfkrachtenmodel van Porter.',
     volledigeTekst: '',
     sections: [
       {
-        type: 'cards',
-        title: 'Keuze en afbakening van de branche',
-        cards: [
-          {
-            title: 'Gekozen branche',
-            text: 'Vul hier de gekozen branche in, bijvoorbeeld de Nederlandse telecommarkt, glasvezelmarkt, mobiele telefonie of zakelijke ICT-diensten. De gekozen branche moet aansluiten bij de activiteiten van KPN en voldoende informatie beschikbaar hebben voor een onderbouwde analyse.',
-          },
-          {
-            title: 'Afbakening',
-            text: 'Beschrijf hier duidelijk welke markt wordt onderzocht, welke producten of diensten hieronder vallen en welke onderdelen buiten de analyse worden gelaten.',
-            items: [
-              'Welke markt wordt onderzocht?',
-              'Welke klanten vallen binnen deze markt?',
-              'Welke producten of diensten horen erbij?',
-              'Welke concurrenten worden meegenomen?',
-              'Welke geografische markt wordt onderzocht?',
-            ],
-          },
-        ],
-      },
-      {
-        type: 'cards',
-        title: 'Gekozen analysemethode',
-        cards: [
-          {
-            title: 'Analysemethode',
-            text: 'Voor deze brancheanalyse kan gebruik worden gemaakt van het vijfkrachtenmodel van Porter of het SGR-schema van Bain. De gekozen methode moet helpen om de aantrekkelijkheid, concurrentiedruk en ontwikkelingen binnen de branche te beoordelen.',
-          },
-          {
-            title: 'Aanbevolen voor KPN',
-            text: 'Porter\'s vijfkrachtenmodel is aanbevolen voor KPN, omdat de methode goed past bij analyse van concurrentiedruk, toetredingsdrempels, leveranciersmacht, klantmacht en substituten in de telecomsector.',
-          },
-        ],
-      },
-      {
-        type: 'iconCards',
-        title: 'Methode-cards',
-        cards: [
-          { title: 'Porter\'s vijfkrachtenmodel', icon: 'TrendingUp', text: 'Geschikt om de concurrentiedruk binnen de branche te analyseren aan de hand van vijf krachten.' },
-          { title: 'SGR-schema van Bain', icon: 'Building', text: 'Geschikt om de structuur, het gedrag en het resultaat van de branche te analyseren.' },
-        ],
-      },
-      {
-        type: 'iconCards',
-        title: 'Porter\'s vijfkrachtenmodel',
-        cards: [
-          { title: 'Dreiging van nieuwe toetreders', icon: 'Building', text: 'Analyseer hier hoe makkelijk nieuwe bedrijven kunnen toetreden tot de gekozen telecombranche.' },
-          { title: 'Onderhandelingsmacht van leveranciers', icon: 'Network', text: 'Analyseer hier de invloed van leveranciers, technologiepartners en netwerkleveranciers op KPN.' },
-          { title: 'Onderhandelingsmacht van afnemers', icon: 'Users', text: 'Analyseer hier hoeveel macht consumenten, zakelijke klanten en overheden hebben.' },
-          { title: 'Dreiging van substituten', icon: 'RadioTower', text: 'Analyseer hier alternatieven voor de diensten van KPN, zoals andere netwerken, mobiele alternatieven of digitale communicatieplatforms.' },
-          { title: 'Rivaliteit tussen bestaande concurrenten', icon: 'Shield', text: 'Analyseer hier de concurrentie tussen KPN, VodafoneZiggo, Odido en andere aanbieders.' },
-        ],
-      },
-      {
-        type: 'table',
-        title: 'Belangrijkste concurrenten',
-        columns: ['Concurrent', 'Marktpositie', 'Relevantie voor KPN'],
-        rows: [
-          ['VodafoneZiggo', 'Grote concurrent in internet, televisie en mobiele diensten', 'Sterke concurrent door combinatie van vaste en mobiele diensten'],
-          ['Odido', 'Concurrent op mobiele telefonie en internet', 'Relevante speler in prijs- en netwerkconcurrentie'],
-          ['Delta Fiber', 'Concurrent in glasvezel', 'Relevant binnen regionale glasvezeluitrol'],
-          ['Online.nl / Budget Thuis', 'Prijsgerichte aanbieders', 'Relevant voor prijsdruk in de consumentenmarkt'],
-        ],
-      },
-      {
-        type: 'iconCards',
-        title: 'Externe ontwikkelingen',
-        cards: [
-          { title: 'Groei van glasvezel', icon: 'Network', text: 'Vul hier de toelichting en bron toe.' },
-          { title: 'Verdere uitrol van 5G', icon: 'RadioTower', text: 'Vul hier de toelichting en bron toe.' },
-          { title: 'Toenemende vraag naar cybersecurity', icon: 'Shield', text: 'Vul hier de toelichting en bron toe.' },
-          { title: 'Prijsdruk consumentenmarkt', icon: 'TrendingUp', text: 'Vul hier de toelichting en bron toe.' },
-          { title: 'Regulering door ACM en overheid', icon: 'Building', text: 'Vul hier de toelichting en bron toe.' },
-          { title: 'Duurzaamheid en energieverbruik', icon: 'Leaf', text: 'Vul hier de toelichting en bron toe.' },
-          { title: 'Digitalisering huishoudens en bedrijven', icon: 'Users', text: 'Vul hier de toelichting en bron toe.' },
-        ],
-      },
-      {
-        type: 'cards',
-        title: 'Samenvatting branchekenmerken',
-        cards: [
-          {
-            title: 'Belangrijkste kenmerken van de branche',
-            text: 'Vat hier de belangrijkste kenmerken van de gekozen branche samen. Denk aan concurrentiedruk, groeikansen, risico\'s, technologische ontwikkelingen en de positie van KPN.',
-          },
-        ],
-      },
-      {
-        type: 'conclusion',
-        title: 'Voorlopige conclusie',
-        text: 'De branche waarin KPN actief is, wordt gekenmerkt door hoge investeringskosten, sterke concurrentie, technologische innovatie en toenemende aandacht voor digitale veiligheid en duurzaamheid. De exacte conclusie wordt verder aangevuld nadat de gekozen branche en analysemethode definitief zijn uitgewerkt.',
+        type: 'chapterTwoBrancheAnalyse',
+        title: '2.1 Brancheanalyse',
       },
     ],
     afbeeldingen: [],
     tabellen: [],
     bronnen: [
-      'Vul hier later bronnen toe voor de gekozen branche.',
-      'Vul hier later bronnen toe over concurrenten, ACM, marktontwikkelingen en telecomdata.',
+      'Porter, M. E. - The Five Competitive Forces That Shape Strategy.',
+      'KPN Integrated Annual Report 2024/2025.',
+      'Autoriteit Consument & Markt, Telecommonitor.',
+      'Beurs FD en financiele databronnen indien gebruikt.',
     ],
-    conclusie: 'De definitieve conclusie van opdracht 2.1 wordt aangevuld nadat de branche en analysemethode inhoudelijk zijn uitgewerkt.',
+    conclusie: 'KPN is actief in een competitieve telecomsector, maar beschikt door sterke infrastructuur, merkbekendheid en innovatie-investeringen over een goede uitgangspositie.',
+  },
+  {
+    id: 'hoofdstuk-3',
+    opdrachtNummer: 'Hoofdstuk 3',
+    titel: 'Financiele analyse',
+    subtitel: 'Solvabiliteit, liquiditeit, rentabiliteit en activiteitskengetallen',
+    korteIntro: 'In hoofdstuk 3 wordt de financiele positie van KPN beoordeeld. De uitwerking is verdeeld in vier aparte paragrafen: solvabiliteit, liquiditeit, rentabiliteit en activiteitskengetallen.',
+    volledigeTekst: '',
+    sections: [],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: financialSources,
+    conclusie: 'De financiele analyse wordt in de volgende paragrafen afzonderlijk uitgewerkt.',
+  },
+  {
+    id: 'opdracht-3-1',
+    opdrachtNummer: '3.1',
+    titel: 'Solvabiliteit',
+    subtitel: 'KPN versus VodafoneZiggo',
+    korteIntro: 'De solvabiliteit laat zien in hoeverre KPN op lange termijn aan haar financiele verplichtingen kan voldoen. In deze paragraaf wordt KPN vergeleken met VodafoneZiggo.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'chapterThreeSolvability',
+        title: '3.1 Solvabiliteitsanalyse',
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: financialSources,
+    conclusie: 'KPN heeft op basis van de solvabiliteitskengetallen een sterker en veiliger financieel profiel dan VodafoneZiggo, maar de exacte jaarcijfers moeten nog worden gecontroleerd met recente jaarverslagen.',
+  },
+  {
+    id: 'opdracht-3-2',
+    opdrachtNummer: '3.2',
+    titel: 'Liquiditeit',
+    subtitel: 'Kortlopende verplichtingen en kasstromen',
+    korteIntro: 'De liquiditeit van KPN wordt beoordeeld in combinatie met de stabiele kasstromen uit abonnementen en telecomdiensten. Definitieve liquiditeitsratio\'s moeten nog worden gecontroleerd met volledige balansgegevens.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'cards',
+        title: 'Liquiditeitsbeoordeling',
+        cards: [
+          {
+            title: 'Stabiele inkomsten',
+            text: 'Telecombedrijven zoals KPN ontvangen veel terugkerende inkomsten uit abonnementen. Daardoor kan een lagere liquiditeitsratio minder direct problematisch zijn dan bij bedrijven met sterk wisselende inkomsten.',
+          },
+          {
+            title: 'Aandachtspunt',
+            text: 'Voor een definitieve current ratio en quick ratio zijn gecontroleerde bedragen nodig voor vlottende activa, voorraad en kortlopende schulden.',
+          },
+          {
+            title: 'Kasstroom',
+            text: 'De free cash flow van KPN bedroeg EUR 952 miljoen in 2025. Dit geeft ruimte voor investeringen, dividend en het voldoen aan verplichtingen.',
+          },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Liquiditeitskengetallen',
+        columns: ['Kengetal', 'Berekening', 'Status', 'Toelichting'],
+        rows: [
+          ['Current ratio', 'Vlottende activa / kortlopende schulden', 'TODO', 'Gebruik deze ratio pas nadat beide bedragen zijn gecontroleerd in Beurs FD of het jaarverslag.'],
+          ['Quick ratio', '(Vlottende activa - voorraad) / kortlopende schulden', 'TODO', 'Gebruik deze ratio pas nadat vlottende activa, voorraad en kortlopende schulden zeker beschikbaar zijn.'],
+          ['Free cash flow', 'Beschikbaar uit jaarverslag', 'EUR 952 mln', 'KPN genereert veel vrije kasstroom uit de bedrijfsactiviteiten.'],
+        ],
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: financialSources,
+    conclusie: 'KPN lijkt door stabiele abonnementsinkomsten en sterke vrije kasstroom voldoende financiele ruimte te hebben, maar de definitieve liquiditeitsratio\'s moeten nog met balansgegevens worden vastgesteld.',
+  },
+  {
+    id: 'opdracht-3-3',
+    opdrachtNummer: '3.3',
+    titel: 'Rentabiliteit',
+    subtitel: 'Winstgevendheid en rendement',
+    korteIntro: 'De rentabiliteit laat zien hoe winstgevend KPN is en hoe goed het bedrijf haar vermogen inzet. Hierbij worden nettowinst, marges, ROE, ROA en ROCE gebruikt.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'cards',
+        title: 'Belangrijkste rentabiliteitscijfers',
+        cards: [
+          { title: 'Nettowinstmarge', text: 'EUR 855 mln / EUR 5.829 mln x 100 = circa 14,7%. Eigen berekening op basis van Beurs FD-cijfers.' },
+          { title: 'EBITDA-marge', text: 'EUR 2.716 mln / EUR 5.829 mln x 100 = circa 46,6%. Eigen berekening op basis van Beurs FD-cijfers.' },
+          { title: 'Rendementen', text: 'ROE bedraagt 24,31%, ROA bedraagt 8,84% en ROCE bedraagt 14,7%. Dit wijst op een winstgevende onderneming.' },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Rentabiliteitskengetallen',
+        columns: ['Onderwerp', 'Cijfer', 'Betekenis', 'Bron'],
+        rows: [
+          ['Omzet', 'EUR 5.829 mln', 'KPN is financieel een grote speler binnen de Nederlandse telecomsector.', 'Beurs FD'],
+          ['Nettowinst', 'EUR 855 mln', 'KPN behaalt duidelijke winst uit haar activiteiten.', 'Beurs FD'],
+          ['EBITDA', 'EUR 2.716 mln', 'KPN is operationeel sterk winstgevend.', 'Beurs FD'],
+          ['Adjusted EBITDA AL', 'EUR 2.636 mln', 'Ondersteunt het beeld van operationele winstgevendheid.', 'KPN Integrated Annual Report 2025'],
+          ['ROE', '24,31%', 'KPN behaalt een hoog rendement voor aandeelhouders.', 'Beurs FD'],
+          ['ROA', '8,84%', 'KPN gebruikt haar totale activa winstgevend.', 'Beurs FD'],
+        ],
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: financialSources,
+    conclusie: 'KPN is winstgevend en kasstroomrijk. De nettowinstmarge, EBITDA-marge en rendementscijfers ondersteunen een positief beeld van de rentabiliteit.',
+  },
+  {
+    id: 'opdracht-3-4',
+    opdrachtNummer: '3.4',
+    titel: 'Activiteitskengetallen',
+    subtitel: 'Efficient gebruik van vermogen',
+    korteIntro: 'Activiteitskengetallen laten zien hoe efficient KPN haar activa inzet om omzet te genereren. Voor KPN is dit belangrijk omdat telecom een kapitaalintensieve sector is.',
+    volledigeTekst: '',
+    sections: [
+      {
+        type: 'cards',
+        title: 'Activiteitsanalyse',
+        cards: [
+          {
+            title: 'Omloopsnelheid totaal vermogen',
+            text: 'EUR 5.829 mln / EUR 12.696 mln = circa 0,46 keer. Dit betekent dat KPN relatief veel vermogen nodig heeft om omzet te genereren.',
+          },
+          {
+            title: 'Kapitaalintensiteit',
+            text: 'Dat is logisch voor een telecombedrijf, omdat netwerken, zendmasten, glasvezel en IT-systemen grote investeringen vragen.',
+          },
+          {
+            title: 'Concurrentievoordeel',
+            text: 'De infrastructuur maakt KPN kapitaalintensief, maar vormt tegelijk een belangrijk concurrentievoordeel binnen de Nederlandse telecomsector.',
+          },
+        ],
+      },
+      {
+        type: 'table',
+        title: 'Activiteitskengetallen',
+        columns: ['Kengetal', 'Berekening', 'Uitkomst', 'Bron'],
+        rows: [
+          ['Omloopsnelheid totaal vermogen', 'EUR 5.829 mln / EUR 12.696 mln', 'circa 0,46 keer', 'Eigen berekening op basis van Beurs FD-cijfers'],
+          ['Totaal activa', 'Beschikbaar uit bedrijfsgegevens', 'EUR 12.696 mln', 'Beurs FD'],
+          ['Capex', 'Beschikbaar uit jaarverslag', 'EUR 1.263 mln', 'KPN Integrated Annual Report 2025'],
+        ],
+      },
+    ],
+    afbeeldingen: [],
+    tabellen: [],
+    bronnen: financialSources,
+    conclusie: 'KPN heeft veel activa nodig om omzet te genereren. Dit past bij de telecomsector en onderstreept dat de netwerkinfrastructuur zowel een kostenpost als een strategisch voordeel is.',
   },
 ]

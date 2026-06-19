@@ -1,5 +1,10 @@
 import { BarChart3, Building, CheckCircle, Eye, Leaf, Network, RadioTower, Shield, ShieldCheck, Target, TrendingUp, Users } from 'lucide-react'
+import BusinessModelCanvasSection from './BusinessModelCanvasSection.jsx'
+import ChapterThreeSolvability from './ChapterThreeSolvability.jsx'
+import ChapterTwoBrancheAnalyse from './ChapterTwoBrancheAnalyse.jsx'
 import ImageBlock from './ImageBlock.jsx'
+import KpnInfographicsSection from './KpnInfographicsSection.jsx'
+import SustainabilityInfographicSection from './SustainabilityInfographicSection.jsx'
 import TableBlock from './TableBlock.jsx'
 
 const icons = {
@@ -165,8 +170,24 @@ function AssessmentBlock({ text }) {
   return <div className="assessment-block">{text}</div>
 }
 
+function SourceItem({ source }) {
+  if (typeof source === 'string') return <li>{source}</li>
+
+  return (
+    <li>
+      <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a>
+      {source.note && <span>{source.note}</span>}
+    </li>
+  )
+}
+
 function renderSection(section) {
   if (section.type === 'cards') return <TextCards key={section.title} {...section} />
+  if (section.type === 'kpnInfographics') return <KpnInfographicsSection key={section.title} />
+  if (section.type === 'sustainabilityInfographic') return <SustainabilityInfographicSection key={section.title} />
+  if (section.type === 'businessModelCanvasKpn') return <BusinessModelCanvasSection key={section.title} />
+  if (section.type === 'chapterTwoBrancheAnalyse') return <ChapterTwoBrancheAnalyse key={section.title} />
+  if (section.type === 'chapterThreeSolvability') return <ChapterThreeSolvability key={section.title} />
   if (section.type === 'kpis') return <KPIGrid key={section.title} {...section} />
   if (section.type === 'images') return <ImageSection key={section.title} {...section} />
   if (section.type === 'iconCards') return <IconCards key={section.title} {...section} />
@@ -202,7 +223,7 @@ export default function AssignmentCard({ assignment }) {
         {(assignment.tabellen || []).map((table) => <TableBlock key={table.title} {...table} />)}
         <div className="source-box">
           <strong>Bronnen</strong>
-          <ul>{assignment.bronnen.map((source) => <li key={source}>{source}</li>)}</ul>
+          <ul>{assignment.bronnen.map((source) => <SourceItem key={typeof source === 'string' ? source : source.title} source={source} />)}</ul>
         </div>
         <div className="conclusion-box">
           <strong>Conclusie</strong>

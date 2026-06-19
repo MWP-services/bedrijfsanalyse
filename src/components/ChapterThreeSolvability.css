@@ -1,0 +1,231 @@
+.solvability-section {
+  margin: 28px 0;
+  padding: clamp(20px, 4vw, 30px);
+  border: 1px solid rgba(0, 161, 93, .22);
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #f4fbf8 100%);
+  box-shadow: 0 16px 42px rgba(7, 36, 31, .08);
+}
+
+.solvability-header {
+  max-width: 980px;
+  margin-bottom: 22px;
+}
+
+.solvability-header h3,
+.solvability-source-note h3 {
+  margin-bottom: 12px;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+}
+
+.solvability-sector-card,
+.formula-grid article,
+.solvability-analysis-grid article,
+.solvability-source-note,
+.solvability-visual,
+.solvability-metric-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(7, 36, 31, .06);
+}
+
+.solvability-sector-card,
+.solvability-source-note {
+  padding: 22px;
+}
+
+.solvability-sector-card p,
+.solvability-source-note p,
+.solvability-analysis-grid p {
+  margin: 0;
+  color: #304b45;
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.formula-grid article {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+}
+
+.formula-grid span {
+  color: var(--green-dark);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: .78rem;
+  letter-spacing: .05em;
+}
+
+.formula-grid strong {
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+.solvability-warning {
+  margin: -6px 0 22px;
+  padding: 12px 14px;
+  border: 1px solid rgba(214, 142, 0, .42);
+  border-radius: 14px;
+  color: #6a4b00;
+  background: #fff9ec;
+  font-weight: 800;
+}
+
+.solvability-visual {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  margin: 22px 0;
+}
+
+.infographic-preview-media .solvability-visual {
+  height: 260px;
+  overflow: hidden;
+}
+
+.infographic-modal-visual .solvability-visual {
+  min-width: 760px;
+}
+
+.solvability-visual-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.solvability-visual-header span {
+  color: var(--green-dark);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: .78rem;
+  letter-spacing: .06em;
+}
+
+.solvability-visual-header h3 {
+  color: var(--navy);
+}
+
+.solvability-metric-grid,
+.solvability-analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.solvability-metric-card {
+  display: grid;
+  gap: 9px;
+  padding: 16px;
+  color: var(--ink);
+  text-align: left;
+}
+
+button.solvability-metric-card {
+  cursor: pointer;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+button.solvability-metric-card:hover,
+button.solvability-metric-card:focus-visible,
+button.solvability-metric-card.active {
+  border-color: rgba(0, 92, 185, .65);
+  box-shadow: 0 0 0 4px rgba(0, 161, 93, .14), 0 14px 30px rgba(7, 36, 31, .1);
+  transform: translateY(-2px);
+  outline: 0;
+}
+
+.solvability-metric-card strong {
+  color: var(--navy);
+}
+
+.solvability-metric-card small {
+  color: var(--muted);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.solvability-bars {
+  display: grid;
+  gap: 12px;
+}
+
+.solvability-progress {
+  display: grid;
+  gap: 8px;
+}
+
+.solvability-progress div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.solvability-track {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8f0ec;
+}
+
+.solvability-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.solvability-track .kpn {
+  background: linear-gradient(90deg, var(--green), #33d58b);
+}
+
+.solvability-track .ziggo {
+  background: linear-gradient(90deg, #0b5cad, #8aa4ba);
+}
+
+.solvability-analysis-grid {
+  margin: 22px 0;
+}
+
+.solvability-analysis-grid article {
+  padding: 20px;
+  border-top: 4px solid var(--green);
+}
+
+.solvability-analysis-grid article:nth-child(2) {
+  border-top-color: var(--navy);
+}
+
+.solvability-analysis-grid article:nth-child(3) {
+  border-top-color: #0b5cad;
+}
+
+.solvability-section .infographic-preview-card {
+  max-width: 760px;
+}
+
+.solvability-conclusion,
+.solvability-source-note {
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .formula-grid,
+  .solvability-metric-grid,
+  .solvability-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solvability-section {
+    padding: 18px;
+    border-radius: 18px;
+  }
+}
