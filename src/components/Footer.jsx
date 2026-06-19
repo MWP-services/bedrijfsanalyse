@@ -9,7 +9,8 @@ export default function Footer() {
         <span>Module: Bedrijfsanalyse</span>
         <span>Opleiding: Bedrijfskunde</span>
         <span>Schooljaar: 2025-2026</span>
-        <span>Teamleden: vul hier namen in</span>
+        <span>Teamleden: Rick Oskam, Puck zandbergen, Mees-Anne Vervoort, Dean van Geffen, Micha Honkoop
+        </span>
       </div>
     </footer>
   )
